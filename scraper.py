@@ -1,5 +1,4 @@
 import scraperwiki
-import scraperwiki.apiwrapper
 import lxml.html
 
 def do_day(rec):    
@@ -77,7 +76,6 @@ def do_day(rec):
     
 #scraperwiki.sqlite.save(["td"], record) wi
 
-#data = scraperwiki.apiwrapper.getData('desert-island-disc-broadcasts', limit=-1, offset=0)
 scraperwiki.sqlite.attach('desert-island-disc-broadcasts') 
 data = scraperwiki.sqlite.select('* from `desert-island-disc-broadcasts`.swdata')
 
